@@ -1,0 +1,15 @@
+---
+declared-services:
+  Conversation:
+    label: conversation
+    plan: free
+applications:
+- name: conv-201-xxx-calc
+  command: npm start
+  path: .
+  memory: 512M
+  instances: 1
+  services:
+  - Conversation
+  env:
+    NPM_CONFIG_PRODUCTION: false
